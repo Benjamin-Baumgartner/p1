@@ -1,0 +1,34 @@
+package hotel;
+public class BookingDetail {
+	private String guest;
+	private Integer roomNumber;
+	private LocalDate date;
+}
+public class Room {
+	private Integer roomNumber;
+	private List<BookingDetail> bookings;
+	public Integer getRoomNumber()
+
+	public void setRoomNumber(Integer roomNumber)
+	public List<BookingDetail> getBookings()
+	public void setBookings(List<BookingDetail> bookings)
+}
+public class BookingManager {
+	private Room[] rooms;
+	public BookingManager() {
+		this.rooms = initializeRooms();
+	}
+	public Set<Integer> getAllRooms()
+	public boolean isRoomAvailable(Integer roomNumber, LocalDate date)
+    public void addBooking(BookingDetail bookingDetail)
+	public Set<Integer> getAvailableRooms(LocalDate date)
+	private static Room[] initializeRooms() {
+		Room[] rooms = new Room[4];
+		rooms[0] = new Room(101);
+		rooms[1] = new Room(102);
+		rooms[2] = new Room(201);
+		rooms[3] = new Room(203);
+		return rooms;
+	}
+}
+
